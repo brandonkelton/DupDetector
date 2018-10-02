@@ -57,6 +57,7 @@
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Product.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="RelayCommand.cs" />
     <Page Include="MainWindow.xaml">
