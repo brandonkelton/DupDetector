@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DupDetector"
         mc:Ignorable="d"
-        Title="Details" Height="450" Width="800">
+        Title="Details" Height="450" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <DataGrid>
+        <DataGrid ItemsSource="{Binding Source=Products}" AlternatingRowBackground="AliceBlue" AutoGenerateColumns="False">
+            <!-- Use this binding for data when running:  {Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}-->
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Action" FontWeight="Bold" Binding="{Binding action}"/>
-                <DataGridTextColumn Header="Rank" Binding="{Binding rank}"/>
+                <DataGridTextColumn Width="55" Header="Action" FontWeight="Bold" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Rank" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="SKU" Binding="{Binding sku}"/>
                 <DataGridTextColumn Header="Base SKU" Binding="{Binding base_sku}"/>
                 <DataGridTextColumn Header="Product Type" Binding="{Binding product_type}"/>

@@ -42,5 +42,11 @@ namespace DupDetector
         {
             this.Close();
         }
+
+        private void Open_Details(object sender, MouseButtonEventArgs e)
+        {
+            var window = new GridWindow();
+            window.Show();
+        }
     }
 }
