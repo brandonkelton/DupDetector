@@ -1,4 +1,5 @@
 ﻿<Window x:Class="DupDetector.MainWindow"
+        x:Name="MainWindowA"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,15 +8,18 @@
         mc:Ignorable="d"
         Background="Black"
         Title="MainWindow" Height="450" Width="650"
-        WindowStyle="None">
+        ShowInTaskbar="True" WindowStyle="None" WindowState="Normal" ResizeMode="CanMinimize"
+        MouseDown="Window_MouseDown"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
-        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Height="20" Text="Select File" Style="{StaticResource TextBlockStyle}"/>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Records:" TextAlignment="Left" Style="{StaticResource TextBlockBoldStyle}"/>
-        <TextBlock Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="20" Text="Select File:" Style="{StaticResource TextBlockStyle}"/>
-        <TextBlock Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Added:" Style="{StaticResource TextBlockBoldStyle}"/>
-        <TextBlock Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Deleted:" Style="{StaticResource TextBlockBoldStyle}"/>
-        <Button Content="Confirm" Grid.Column="1" HorizontalAlignment="Left" Margin="172,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonStyle}"/>
-        <Button Content="Details" Grid.Column="1" HorizontalAlignment="Left" Margin="94,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,100,0,0" Height="20" Text="Select File" Style="{StaticResource TextBlockStyle}"/>
+        <TextBlock Text="Records:" TextAlignment="Left" Style="{StaticResource TextBlockBoldStyle}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Height="20" Text="Select File:" Style="{StaticResource TextBlockStyle}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Added:" Style="{StaticResource TextBlockBoldStyle}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Deleted:" Style="{StaticResource TextBlockBoldStyle}"/>
+        <Button Content="Confirm" Grid.Column="1" HorizontalAlignment="Left" Margin="172,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonThinStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
+        <Button Content="Details" Grid.Column="1" HorizontalAlignment="Left" Margin="94,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonThinStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
+        <Button Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource ButtonThinStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
         <ComboBox HorizontalAlignment="Left" Margin="121,10,0,0" VerticalAlignment="Top" Width="386" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

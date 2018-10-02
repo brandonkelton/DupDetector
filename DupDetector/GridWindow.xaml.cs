@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace DupDetector
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for GridWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class GridWindow : Window
     {
-        public Window1()
+        public GridWindow()
         {
             InitializeComponent();
         }
