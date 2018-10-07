@@ -33,12 +33,17 @@ namespace DupDetector
                 this.DragMove();
         }
 
-        private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        private void ButtonConfirm_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.Close();
+
         }
 
-        private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void ButtonDetails_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void ButtonClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Close();
         }

@@ -12,12 +12,12 @@
         MouseDown="Window_MouseDown"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Height="20" Text="Select File:" Style="{StaticResource TextBlockStyle}" Margin="35,98,0,0"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Added:" Style="{StaticResource TextBlockBoldStyle}" RenderTransformOrigin="1.542,9" Margin="35,243,0,0"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Deleted:" Style="{StaticResource TextBlockBoldStyle}" Margin="35,268,0,0"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="565,406,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
-        <Button Content="Details" HorizontalAlignment="Left" Margin="474,406,0,0" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
-        <Button Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource ButtonThinStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
-        <ComboBox HorizontalAlignment="Left" Margin="126,98,0,0" VerticalAlignment="Top" Width="386"/>
+        <Button Name="ButtonConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="565,406,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonStyle}" PreviewMouseDown="ButtonConfirm_PreviewMouseDown"/>
+        <Button Name="ButtonDetails" Content="Details" HorizontalAlignment="Left" Margin="474,406,0,0" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}" PreviewMouseDown="ButtonDetails_PreviewMouseDown"/>
+        <Button Name="ButtonClose" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource ButtonThinStyle}" PreviewMouseDown="ButtonClose_PreviewMouseDown"/>
+        <Button Name="ButtonSelectFile" Content="Select a File" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,50,0,0"/>
+        <TextBox Name="TextBoxFile" Style="{StaticResource TextBoxStyle}" FontSize="19" IsReadOnly="True" HorizontalAlignment="Left" Margin="170,50,0,0" VerticalAlignment="Top" Width="400"/>
     </Grid>
 </Window>
