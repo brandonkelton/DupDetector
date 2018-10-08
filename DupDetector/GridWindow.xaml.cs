@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DupDetector.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,12 @@ namespace DupDetector
         public GridWindow()
         {
             InitializeComponent();
+
+            Products = new ObservableCollection<Product>();
+            Products.Add(new Product { Id = 123, Name = "Test1" });
+            Products.Add(new Product { Id = 987, Name = "Test2" });
         }
+
+        public ObservableCollection<Product> Products { get; set; }
     }
 }
