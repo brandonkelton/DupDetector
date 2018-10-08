@@ -12,12 +12,14 @@
         MouseDown="Window_MouseDown"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Height="20" Text="Select File:" Style="{StaticResource TextBlockStyle}" Margin="35,98,0,0"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Height="20" Text="Select File:" Style="{StaticResource TextBlockBoldStyle}" Margin="35,108,0,0"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Added:" Style="{StaticResource TextBlockBoldStyle}" RenderTransformOrigin="1.542,9" Margin="35,243,0,0"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Deleted:" Style="{StaticResource TextBlockBoldStyle}" Margin="35,268,0,0"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Updated:" Style="{StaticResource TextBlockBoldStyle}" Margin="35,290,0,0"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="No Action:" Style="{StaticResource TextBlockBoldStyle}" Margin="35,315,0,0"/>
         <Button Content="Confirm" HorizontalAlignment="Left" Margin="565,406,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonStyle}"/>
         <Button Content="Details" HorizontalAlignment="Left" Margin="474,406,0,0" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}" PreviewMouseDown="Open_Details"/>
         <Button Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource ButtonThinStyle}" PreviewMouseDown="Button_PreviewMouseDown"/>
-        <ComboBox HorizontalAlignment="Left" Margin="126,98,0,0" VerticalAlignment="Top" Width="386" Style="{StaticResource ComboBoxStyle}"/>
+        <ComboBox HorizontalAlignment="Left" Margin="125,98,0,0" VerticalAlignment="Top" Width="515" Style="{StaticResource ComboBoxStyle}"/>
     </Grid>
 </Window>
