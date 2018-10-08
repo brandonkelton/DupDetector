@@ -59,5 +59,10 @@ namespace DupDetector
                 TextBoxFile.Text = filename;
             }
         }
+
+        private void ButtonDetails_Copy_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

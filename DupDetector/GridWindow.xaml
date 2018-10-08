@@ -30,7 +30,7 @@
                 <DataGridTextColumn Header="Clone" Binding="{Binding clone}"/>
                 <DataGridCheckBoxColumn Header="Bioactive" Binding="{Binding bioactive}"/>
                 <DataGridCheckBoxColumn Header="Animal Free" Binding="{Binding animal_free}"/>
-                <DataGridTextColumn Header="Percent Prity" Binding="{Binding percent_purity}"/>
+                <DataGridTextColumn Header="Percent Purity" Binding="{Binding percent_purity}"/>
                 <DataGridTextColumn Header="Applications" Binding="{Binding applications}"/>
                 <DataGridTextColumn Header="Lead Time" Binding="{Binding lead_time_weeks}"/>
                 <DataGridTextColumn Header="Price" Binding="{Binding price}"/>
