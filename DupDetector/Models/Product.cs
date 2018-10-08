@@ -10,8 +10,6 @@ namespace DupDetector.Models
 {
     public class Product
     {
-        internal int Id;
-
         [Column("Action"), DisplayName("Action")]
         public string Action { get; set; }
 
@@ -95,6 +93,5 @@ namespace DupDetector.Models
 
         [Column("supplier_catalog_number"), DisplayName("Supplier Catalog #")]
         public string SupplierCatalogNumber { get; set; }
-        public string Name { get; internal set; }
     }
 }

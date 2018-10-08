@@ -1,6 +1,8 @@
-﻿using Microsoft.Win32;
+﻿using DupDetector.Models;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,9 +41,15 @@ namespace DupDetector
 
         }
 
-        private void ButtonDetails_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private async void ButtonDetails_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            // Temp code to see if file loading works
+            var fileProcessor = new FileProcessor();
+            var rowCollection = await fileProcessor.Extract(TextBoxFile.Text);
+            await fileProcessor.Translate(rowCollection);
+            
             var gridWindow = new GridWindow();
+            gridWindow.Products = new ObservableCollection<Product>(fileProcessor.Products);
             gridWindow.Show();
         }
 

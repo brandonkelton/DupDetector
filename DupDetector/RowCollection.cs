@@ -31,7 +31,8 @@ namespace DupDetector
         {
             if (String.IsNullOrEmpty(text)) throw new ArgumentException("Text can not be null or empty.");
             var rawRows = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            this.Rows = new List<Row>();
+
+            Rows = new List<Row>();
 
             bool isFirstRow = columnsIncluded;
             foreach (string r in rawRows)
@@ -43,7 +44,7 @@ namespace DupDetector
                 }
                 else
                 {
-                    var row = new Row().SetDelimiter(this.Delimiter).SetRow(r);
+                    var row = new Row().SetDelimiter(Delimiter).SetRow(r);
                     Rows.Add(row);
                 }
             }
