@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,7 +41,8 @@ namespace DupDetector
 
         private void ButtonDetails_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            var gridWindow = new GridWindow();
+            gridWindow.Show();
         }
 
         private void ButtonClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -50,8 +52,8 @@ namespace DupDetector
 
         private void ButtonSelectFile_PreviewMouseMouse(object sender, MouseButtonEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            bool? result = dlg.ShowDialog();
+            var dlg = new OpenFileDialog();
+            var result = dlg.ShowDialog();
 
             if (result == true)
             {
