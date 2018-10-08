@@ -5,44 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DupDetector"
         mc:Ignorable="d"
-        Title="Details" Height="450" Width="800"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <DataGrid ItemsSource="{Binding Source=Products}" AlternatingRowBackground="AliceBlue" AutoGenerateColumns="False">
-            <!-- Use this binding for data when running:  {Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}-->
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="55" Header="Action" FontWeight="Bold" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Rank" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="SKU" Binding="{Binding sku}"/>
-                <DataGridTextColumn Header="Base SKU" Binding="{Binding base_sku}"/>
-                <DataGridTextColumn Header="Product Type" Binding="{Binding product_type}"/>
-                <DataGridTextColumn Header="Molecule" Binding="{Binding molecule}"/>
-                <DataGridTextColumn Header="Original Molecule" Binding="{Binding original_molecule_identifier}"/>
-                <DataGridTextColumn Header="Manufacturer Common Name" Binding="{Binding manufacturer_common_name}"/>
-                <DataGridTextColumn Header="Species" Binding="{Binding species}"/>
-                <DataGridTextColumn Header="Size" Binding="{Binding size}"/>
-                <DataGridTextColumn Header="Size N" Binding="{Binding size_n}"/>
-                <DataGridTextColumn Header="Protein / Immmunogen Sequence" Binding="{Binding protein_or_immmunogen_sequence}"/>
-                <DataGridTextColumn Header="Tag" Binding="{Binding tag}"/>
-                <DataGridTextColumn Header="Host" Binding="{Binding host}"/>
-                <DataGridTextColumn Header="Isotype" Binding="{Binding isotype}"/>
-                <DataGridTextColumn Header="Clonality" Binding="{Binding clonality}"/>
-                <DataGridTextColumn Header="Clone" Binding="{Binding clone}"/>
-                <DataGridCheckBoxColumn Header="Bioactive" Binding="{Binding bioactive}"/>
-                <DataGridCheckBoxColumn Header="Animal Free" Binding="{Binding animal_free}"/>
-                <DataGridTextColumn Header="Percent Purity" Binding="{Binding percent_purity}"/>
-                <DataGridTextColumn Header="Applications" Binding="{Binding applications}"/>
-                <DataGridTextColumn Header="Lead Time" Binding="{Binding lead_time_weeks}"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding price}"/>
-                <DataGridTextColumn Header="Image Number" Binding="{Binding image_number}"/>
-                <DataGridTextColumn Header="Supplier" Binding="{Binding supplier}"/>
-                <DataGridTextColumn Header="Order History" Binding="{Binding order_history}"/>
-                <DataGridTextColumn Header="Buffer" Binding="{Binding buffer}"/>
-                <DataGridTextColumn Header="Supplier Catalog #" Binding="{Binding supplier_cat_num}"/>
+        Title="Details" Height="450" Width="800">
+    <Grid DataContext="{Binding ElementName=ProductDetails, Path=.}">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <DataGrid ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}" AlternatingRowBackground="AliceBlue" AutoGenerateColumns="False">
+                <!-- Use this binding for data when running:  {Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="55" Header="Action" FontWeight="Bold" Binding="{Binding Action}"/>
+                    <DataGridTextColumn Header="Rank" Binding="{Binding Rank}"/>
+                    <DataGridTextColumn Header="SKU" Binding="{Binding sku}"/>
+                    <DataGridTextColumn Header="Base SKU" Binding="{Binding base_sku}"/>
+                    <DataGridTextColumn Header="Product Type" Binding="{Binding product_type}"/>
+                    <DataGridTextColumn Header="Molecule" Binding="{Binding molecule}"/>
+                    <DataGridTextColumn Header="Original Molecule" Binding="{Binding original_molecule_identifier}"/>
+                    <DataGridTextColumn Header="Manufacturer Common Name" Binding="{Binding manufacturer_common_name}"/>
+                    <DataGridTextColumn Header="Species" Binding="{Binding species}"/>
+                    <DataGridTextColumn Header="Size" Binding="{Binding size}"/>
+                    <DataGridTextColumn Header="Size N" Binding="{Binding size_n}"/>
+                    <DataGridTextColumn Header="Protein / Immmunogen Sequence" Binding="{Binding protein_or_immmunogen_sequence}"/>
+                    <DataGridTextColumn Header="Tag" Binding="{Binding tag}"/>
+                    <DataGridTextColumn Header="Host" Binding="{Binding host}"/>
+                    <DataGridTextColumn Header="Isotype" Binding="{Binding isotype}"/>
+                    <DataGridTextColumn Header="Clonality" Binding="{Binding clonality}"/>
+                    <DataGridTextColumn Header="Clone" Binding="{Binding clone}"/>
+                    <DataGridCheckBoxColumn Header="Bioactive" Binding="{Binding bioactive}"/>
+                    <DataGridCheckBoxColumn Header="Animal Free" Binding="{Binding animal_free}"/>
+                    <DataGridTextColumn Header="Percent Purity" Binding="{Binding percent_purity}"/>
+                    <DataGridTextColumn Header="Applications" Binding="{Binding applications}"/>
+                    <DataGridTextColumn Header="Lead Time" Binding="{Binding lead_time_weeks}"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding price}"/>
+                    <DataGridTextColumn Header="Image Number" Binding="{Binding image_number}"/>
+                    <DataGridTextColumn Header="Supplier" Binding="{Binding supplier}"/>
+                    <DataGridTextColumn Header="Order History" Binding="{Binding order_history}"/>
+                    <DataGridTextColumn Header="Buffer" Binding="{Binding buffer}"/>
+                    <DataGridTextColumn Header="Supplier Catalog #" Binding="{Binding supplier_cat_num}"/>
 
-            </DataGrid.Columns>
-        </DataGrid>
-    </ScrollViewer>
-    
-
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
 </Window>

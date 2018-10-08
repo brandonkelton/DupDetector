@@ -25,11 +25,10 @@ namespace DupDetector
         {
             InitializeComponent();
 
-            Products = new ObservableCollection<Product>();
-            Products.Add(new Product { Id = 123, Name = "Test1" });
-            Products.Add(new Product { Id = 987, Name = "Test2" });
+            //Products.Add(new Product { Action = "Test1", Rank="1", AnimalFree = "Test2" });
+            //Products.Add(new Product { Action = "Test3", Rank="2", AnimalFree = "Test4" });
         }
 
-        public ObservableCollection<Product> Products { get; set; }
+        public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
     }
 }
