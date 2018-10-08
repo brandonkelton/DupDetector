@@ -4,12 +4,12 @@
                     xmlns:local="clr-namespace:TC.ScaffoldingWizard.UI">
 
     <Style x:Key="TextBlockStyle" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
     <Style x:Key="TextBlockBoldStyle" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -51,7 +51,7 @@
         </Setter>
     </Style>
     <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="BorderThickness" Value="4"/>
@@ -70,7 +70,7 @@
                             <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
                         </Grid.ColumnDefinitions>
                         <Popup Margin="1" x:Name="PART_Popup" AllowsTransparency="False" IsOpen="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Bottom" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Grid.ColumnSpan="2">
-                            <Border x:Name="DropDownBorder" Background="Black" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding Path=ActualWidth, ElementName=MainGrid}" BorderBrush="CornflowerBlue" BorderThickness="4,1,4,4" CornerRadius="0,0,4,4">
+                            <Border x:Name="DropDownBorder" Background="Black" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding Path=ActualWidth, ElementName=MainGrid}" BorderBrush="DarkBlue" BorderThickness="4,1,4,4" CornerRadius="0,0,4,4">
                                 <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained"/>
                             </Border>
                         </Popup>
@@ -96,10 +96,10 @@
         </Setter>
     </Style>
     <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="BorderThickness" Value="4"/>
+        <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderBrush" Value="White"/>
         <Setter Property="Padding" Value="1"/>
@@ -132,10 +132,10 @@
         </Setter>
     </Style>
     <Style x:Key="PasswordBoxStyle" TargetType="{x:Type PasswordBox}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="BorderThickness" Value="4"/>
+        <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderBrush" Value="White"/>
         <Setter Property="Padding" Value="1"/>
@@ -221,7 +221,7 @@
         </Setter>
     </Style>
     <Style x:Key="ToggleButtonStyle" TargetType="{x:Type ToggleButton}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="BorderThickness" Value="4"/>
@@ -258,10 +258,10 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="BorderThickness" Value="4"/>
+        <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderBrush" Value="White"/>
         <Setter Property="Padding" Value="5"/>
@@ -298,11 +298,11 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonGreenStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="BorderThickness" Value="4"/>
-        <Setter Property="Foreground" Value="Green"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderBrush" Value="Green"/>
         <Setter Property="Padding" Value="5"/>
         <Setter Property="Template">
@@ -338,11 +338,11 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonRedStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="BorderThickness" Value="4"/>
-        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderBrush" Value="Red"/>
         <Setter Property="Padding" Value="5"/>
         <Setter Property="Template">
@@ -378,7 +378,7 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonSmallNegationStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="BorderThickness" Value="2"/>
@@ -415,7 +415,7 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonMediumStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="BorderThickness" Value="3"/>
@@ -452,7 +452,7 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonNoPaddingStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="BorderThickness" Value="4"/>
@@ -490,7 +490,7 @@
         </Setter>
     </Style>
     <Style x:Key="ButtonThinStyle" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontFamily" Value="calibre "/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="BorderThickness" Value="1"/>
