@@ -55,12 +55,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Detector.cs" />
+    <Compile Include="FileProcessor.cs" />
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="Row.cs" />
+    <Compile Include="RowCollection.cs" />
+    <Compile Include="Tokenizer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
