@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Detector.cs" />
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>

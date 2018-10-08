@@ -33,20 +33,31 @@ namespace DupDetector
                 this.DragMove();
         }
 
-        private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        private void ButtonConfirm_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ButtonDetails_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void ButtonClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Close();
         }
 
-        private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void ButtonSelectFile_PreviewMouseMouse(object sender, MouseButtonEventArgs e)
         {
-            this.Close();
-        }
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            bool? result = dlg.ShowDialog();
 
-        private void Open_Details(object sender, MouseButtonEventArgs e)
-        {
-            var window = new GridWindow();
-            window.Show();
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                TextBoxFile.Text = filename;
+            }
         }
     }
 }
