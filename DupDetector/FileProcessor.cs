@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Concurrent;
+using System.Text.RegularExpressions;
 
 namespace DupDetector
 {
@@ -46,7 +47,19 @@ namespace DupDetector
                         var props = typeof(Product).GetProperties().Where(p => p.GetCustomAttributes(typeof(ColumnAttribute), false).OfType<ColumnAttribute>().Where(a => a.Name == fileColName).Count() > 0);
                         if (props.Count() > 0)
                         {
-                            props.ElementAt(0).SetValue(product, row.Fields[i]);
+                            string value = row.Fields[i];
+                            if (Regex.IsMatch(value, @"^\d+$"))
+                            {
+                                int convertedValue;
+                                if (int.TryParse(value, out convertedValue))
+                                {
+                                    props.ElementAt(0).SetValue(product, convertedValue);
+                                }
+                            }
+                            else
+                            {
+                                props.ElementAt(0).SetValue(product, value);
+                            }
                         }
                         else
                         {
