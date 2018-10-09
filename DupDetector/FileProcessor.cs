@@ -22,7 +22,7 @@ namespace DupDetector
 
             using (TextReader reader = new StreamReader(fileName))
             {
-                rowCollection.SetRows(await reader.ReadToEndAsync());
+                rowCollection.SetRows(await reader.ReadToEndAsync(), true);
             }
 
             return rowCollection;

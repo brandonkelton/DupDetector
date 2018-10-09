@@ -15,6 +15,7 @@ namespace DupDetector
             bool isEscaped = false;
             bool isQuoted = false;
             StringBuilder builder = new StringBuilder();
+            Tokens = new List<string>();
 
             for (int i=0; i<text.Length; i++)
             {

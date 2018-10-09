@@ -43,7 +43,7 @@ namespace DupDetector.Models
         [Column("size_n"), DisplayName("Size n")]
         public string SizeN { get; set; }
 
-        [Column("protein_or_immmunogen_sequence "), DisplayName("Protein / Immmunogen Sequence")]
+        [Column("protein_or_immunogen_sequence"), DisplayName("Protein / Immmunogen Sequence")]
         public string ProteinImmmunogenSequence { get; set; }
 
         [Column("tag"), DisplayName("Tag")]

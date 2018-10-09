@@ -23,7 +23,7 @@ namespace DupDetector
         {
             if (this.Delimiter == String.Empty) throw new ArgumentException("Delimiter required before setting columns.");
             if (String.IsNullOrEmpty(text)) throw new ArgumentException("Text can not be null or empty.");
-            ColumnNames = new List<string>(text.Split(new[] { text }, StringSplitOptions.None));
+            ColumnNames = new List<string>(text.Split(new[] { Delimiter }, StringSplitOptions.None));
             return this;
         }
 
