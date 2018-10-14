@@ -43,7 +43,11 @@
         <Button x:Name="ButtonConfirm" Content="Confirm" IsEnabled="{Binding IsConfirmEnabled}" HorizontalAlignment="Left" Margin="435,114,0,-26" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonGreenStyle}" Command="{Binding ConfirmCommand}" Grid.Row="3"/>
         <Button x:Name="ButtonDetails" Content="Details" IsEnabled="{Binding IsDetailsEnabled}" HorizontalAlignment="Left" Margin="361,114,0,-26" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}" Command="{Binding DetailsCommand}" Grid.Row="3"/>
         <Button x:Name="ButtonSelectFile" Content="Select a File" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,23,0,0" Command="{Binding SelectFileCommand}"/>
-        <TextBox x:Name="TextBoxFile" Style="{StaticResource TextBoxStyle}" Text="{Binding FileName}" FontSize="14" Height="30" IsReadOnly="True" Padding="2.5" HorizontalAlignment="Left" Margin="110,23,0,0" VerticalAlignment="Top" Width="400"/>
+        <TextBox x:Name="TextBoxFile" Style="{StaticResource TextBoxStyle}" Text="{Binding FileName}" FontSize="14" Height="30" IsReadOnly="True" Padding="2.5" HorizontalAlignment="Left" Margin="110,23,0,0" VerticalAlignment="Top" Width="400">
+            <TextBox.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectFileCommand}"/>
+            </TextBox.InputBindings>
+        </TextBox>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Updated:" Style="{StaticResource TextBlockBoldStyle}" Margin="24,54,0,0" RenderTransformOrigin="-0.142,0.796" Grid.Row="3"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="No Action:" Style="{StaticResource TextBlockBoldStyle}" Margin="24,74,0,0" RenderTransformOrigin="-0.142,0.796" Grid.Row="3"/>
         <TextBlock Style="{StaticResource TextBlockStyle}" x:Name="TextBlockRecordsAdded" Text="Select a file for processing" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" Grid.Row="3"/>
