@@ -41,6 +41,7 @@ namespace DupDetector.ViewModels
         private async Task ProcessFile()
         {
             await _service.LoadProducts(FileName);
+            IsDetailsEnabled = true;
         }
 
         public ICommand DetailsCommand { get; }
@@ -60,10 +61,42 @@ namespace DupDetector.ViewModels
             set
             {
                 _fileName = value;
+                IsProcessEnabled = !String.IsNullOrEmpty(value);
                 OnPropertyChanged(() => FileName);
             }
         }
 
-        
+        private bool _isDetailsEnabled;
+        public bool IsDetailsEnabled
+        {
+            get => _isDetailsEnabled;
+            set
+            {
+                _isDetailsEnabled = value;
+                OnPropertyChanged(() => IsDetailsEnabled);
+            }
+        }
+
+        private bool _isConfirmEnabled;
+        public bool IsConfirmEnabled
+        {
+            get => _isConfirmEnabled;
+            set
+            {
+                _isConfirmEnabled = value;
+                OnPropertyChanged(() => IsConfirmEnabled);
+            }
+        }
+
+        private bool _isProcessEnabled;
+        public bool IsProcessEnabled
+        {
+            get => _isProcessEnabled;
+            set
+            {
+                _isProcessEnabled = value;
+                OnPropertyChanged(() => IsProcessEnabled);
+            }
+        }
     }
 }

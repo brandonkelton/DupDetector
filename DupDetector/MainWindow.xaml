@@ -40,8 +40,8 @@
         </Rectangle>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Added:" Style="{StaticResource TextBlockBoldStyle}" RenderTransformOrigin="1.542,9" Margin="24,9,0,0" Grid.Row="3"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Deleted:" Style="{StaticResource TextBlockBoldStyle}" Margin="24,33,0,0" Grid.Row="3"/>
-        <Button x:Name="ButtonConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="435,114,0,-26" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonGreenStyle}" Command="{Binding ConfirmCommand}" Grid.Row="3"/>
-        <Button x:Name="ButtonDetails" Content="Details" HorizontalAlignment="Left" Margin="361,114,0,-26" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}" Command="{Binding DetailsCommand}" Grid.Row="3"/>
+        <Button x:Name="ButtonConfirm" Content="Confirm" IsEnabled="{Binding IsConfirmEnabled}" HorizontalAlignment="Left" Margin="435,114,0,-26" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonGreenStyle}" Command="{Binding ConfirmCommand}" Grid.Row="3"/>
+        <Button x:Name="ButtonDetails" Content="Details" IsEnabled="{Binding IsDetailsEnabled}" HorizontalAlignment="Left" Margin="361,114,0,-26" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonStyle}" Command="{Binding DetailsCommand}" Grid.Row="3"/>
         <Button x:Name="ButtonSelectFile" Content="Select a File" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,23,0,0" Command="{Binding SelectFileCommand}"/>
         <TextBox x:Name="TextBoxFile" Style="{StaticResource TextBoxStyle}" Text="{Binding FileName}" FontSize="14" Height="30" IsReadOnly="True" Padding="2.5" HorizontalAlignment="Left" Margin="110,23,0,0" VerticalAlignment="Top" Width="400"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Updated:" Style="{StaticResource TextBlockBoldStyle}" Margin="24,54,0,0" RenderTransformOrigin="-0.142,0.796" Grid.Row="3"/>
@@ -52,7 +52,7 @@
         <TextBlock Style="{StaticResource TextBlockStyle}" x:Name="TextBlockRecordsAddedNoAction" Text="Select a file for processing" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,74,0,0" Grid.Row="3"/>
         <ProgressBar x:Name="ProgressFileProcess" HorizontalAlignment="Left" Height="16" Margin="111,61,0,0" VerticalAlignment="Top" Width="296" Background="Black" BorderBrush="White" BorderThickness="2" Grid.RowSpan="2"/>
         <Button x:Name="ButtonExit" Content="Exit" HorizontalAlignment="Left" Margin="10,115,0,-27" VerticalAlignment="Top" Width="75"  Style="{StaticResource ButtonRedStyle}" PreviewMouseDown="ButtonClose_PreviewMouseDown" Grid.Row="3"/>
-        <Button x:Name="ButtonConfirm_Copy" Content="Process" HorizontalAlignment="Left" Margin="435,54,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonGreenStyle}" Command="{Binding ProcessCommand}" Grid.RowSpan="2"/>
+        <Button x:Name="ButtonConfirm_Copy" Content="Process" IsEnabled="{Binding IsProcessEnabled}" HorizontalAlignment="Left" Margin="435,54,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource ButtonGreenStyle}" Command="{Binding ProcessCommand}" Grid.RowSpan="2"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Text="Total:" Style="{StaticResource TextBlockBoldStyle}" RenderTransformOrigin="1.542,9" Margin="24,16,0,0" Grid.Row="2" Grid.RowSpan="2"/>
         <TextBlock Style="{StaticResource TextBlockStyle}" x:Name="TextBlockRecordsAdded_Copy" Text="Select a file for processing" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,17,0,0" Grid.Row="2" Grid.RowSpan="2"/>
     </Grid>
