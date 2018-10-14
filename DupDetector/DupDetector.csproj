@@ -146,6 +146,8 @@
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Species.cs" />
+    <Compile Include="Models\Application.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="RelayCommand.cs" />

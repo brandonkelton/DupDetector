@@ -45,9 +45,11 @@ namespace DupDetector
                 else
                 {
                     var row = new Row().SetDelimiter(Delimiter).SetRow(r);
+                    while (row.Fields.Count < this.ColumnNames.Count) row.Fields.Add(String.Empty);
                     Rows.Add(row);
                 }
             }
+
             return this;
         }
     }

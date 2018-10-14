@@ -62,10 +62,10 @@ namespace DupDetector.Models
         public string Clone { get; set; }
 
         [Column("bioactive"), DisplayName("Bioactive")]
-        public string Bioactive { get; set; }
+        public bool Bioactive { get; set; }
 
         [Column("animal_free"), DisplayName("Animal Free")]
-        public string AnimalFree { get; set; }
+        public bool AnimalFree { get; set; }
 
         [Column("percent_purity"), DisplayName("Percent Purity")]
         public string PercentPurity { get; set; }

@@ -7,38 +7,40 @@
         mc:Ignorable="d"
         Title="Details" Height="450" Width="800">
     <Grid DataContext="{Binding ElementName=ProductDetails, Path=.}">
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <DataGrid ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}" AlternatingRowBackground="AliceBlue" AutoGenerateColumns="False">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="3">
+            <DataGrid ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}" 
+                      AlternatingRowBackground="AliceBlue" AutoGenerateColumns="False" RowHeaderStyle="{StaticResource DataGridRowHeaderBackgroundStyle}"
+                      HeadersVisibility="All">
                 <!-- Use this binding for data when running:  {Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}-->
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="55" Header="Action" FontWeight="Bold" Binding="{Binding Action}"/>
-                    <DataGridTextColumn Header="Rank" Binding="{Binding Rank}"/>
-                    <DataGridTextColumn Header="SKU" Binding="{Binding SKU}"/>
-                    <DataGridTextColumn Header="Base SKU" Binding="{Binding BaseSKU}"/>
-                    <DataGridTextColumn Header="Product Type" Binding="{Binding ProductType}"/>
-                    <DataGridTextColumn Header="Molecule" Binding="{Binding Molecule}"/>
-                    <DataGridTextColumn Header="Original Molecule" Binding="{Binding OriginalMolecule}"/>
-                    <DataGridTextColumn Header="Manufacturer Common Name" Binding="{Binding OriginalMolecule}"/>
-                    <DataGridTextColumn Header="Species" Binding="{Binding Species}"/>
-                    <DataGridTextColumn Header="Size" Binding="{Binding Size}"/>
-                    <DataGridTextColumn Header="Size N" Binding="{Binding SizeN}"/>
-                    <DataGridTextColumn Header="Protein / Immmunogen Sequence" Binding="{Binding ProteinImmmunogenSequence}"/>
-                    <DataGridTextColumn Header="Tag" Binding="{Binding Tag}"/>
-                    <DataGridTextColumn Header="Host" Binding="{Binding Host}"/>
-                    <DataGridTextColumn Header="Isotype" Binding="{Binding Isotype}"/>
-                    <DataGridTextColumn Header="Clonality" Binding="{Binding Clonality}"/>
-                    <DataGridTextColumn Header="Clone" Binding="{Binding Clone}"/>
-                    <DataGridCheckBoxColumn Header="Bioactive" Binding="{Binding Bioactive}"/>
-                    <DataGridCheckBoxColumn Header="Animal Free" Binding="{Binding AnimalFree}"/>
-                    <DataGridTextColumn Header="Percent Purity" Binding="{Binding PercentPurity}"/>
-                    <DataGridTextColumn Header="Applications" Binding="{Binding Applications}"/>
-                    <DataGridTextColumn Header="Lead Time" Binding="{Binding LeadTime}"/>
-                    <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
-                    <DataGridTextColumn Header="Image Number" Binding="{Binding ImageNumber}"/>
-                    <DataGridTextColumn Header="Supplier" Binding="{Binding Supplier}"/>
-                    <DataGridTextColumn Header="Order History" Binding="{Binding OrderHistory}"/>
-                    <DataGridTextColumn Header="Buffer" Binding="{Binding Buffer}"/>
-                    <DataGridTextColumn Header="Supplier Catalog #" Binding="{Binding SupplierCatalogNumber}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Width="Auto" Header="Action" FontWeight="Bold" Binding="{Binding Action}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Rank" Binding="{Binding Rank}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="SKU" Binding="{Binding SKU}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Base SKU" Binding="{Binding BaseSKU}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Product Type" Binding="{Binding ProductType}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Molecule" Binding="{Binding Molecule}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Original Molecule" Binding="{Binding OriginalMolecule}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Manufacturer Common Name" Binding="{Binding OriginalMolecule}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Species" Binding="{Binding Species}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Size" Binding="{Binding Size}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Size N" Binding="{Binding SizeN}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Protein / Immmunogen Sequence" Binding="{Binding ProteinImmmunogenSequence}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Tag" Binding="{Binding Tag}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Host" Binding="{Binding Host}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Isotype" Binding="{Binding Isotype}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Clonality" Binding="{Binding Clonality}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Clone" Binding="{Binding Clone}"/>
+                    <DataGridCheckBoxColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Bioactive" Binding="{Binding Bioactive}"/>
+                    <DataGridCheckBoxColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Animal Free" Binding="{Binding AnimalFree}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Percent Purity" Binding="{Binding PercentPurity}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Applications" Binding="{Binding Applications}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Lead Time" Binding="{Binding LeadTime}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Price" Binding="{Binding Price}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Image Number" Binding="{Binding ImageNumber}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Supplier" Binding="{Binding Supplier}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Order History" Binding="{Binding OrderHistory}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Buffer" Binding="{Binding Buffer}"/>
+                    <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Supplier Catalog #" Binding="{Binding SupplierCatalogNumber}"/>
 
                 </DataGrid.Columns>
             </DataGrid>

@@ -48,10 +48,20 @@ namespace DupDetector
                         if (props.Count() > 0)
                         {
                             string value = row.Fields[i];
-                            if (Regex.IsMatch(value, @"^\d+$"))
+                            //Regex.IsMatch(value, @"^\d+$")
+                            if (props.ElementAt(0).PropertyType == typeof(int))
                             {
                                 int convertedValue;
                                 if (int.TryParse(value, out convertedValue))
+                                {
+                                    props.ElementAt(0).SetValue(product, convertedValue);
+                                }
+                            }
+                            //Regex.IsMatch(value, "^(True|true|False|false|1|0)")
+                            else if (props.ElementAt(0).PropertyType == typeof(bool))
+                            {
+                                bool convertedValue;
+                                if (bool.TryParse(value, out convertedValue))
                                 {
                                     props.ElementAt(0).SetValue(product, convertedValue);
                                 }

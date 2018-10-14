@@ -74,5 +74,10 @@ namespace DupDetector
         {
 
         }
+
+        private void TextBoxFile_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

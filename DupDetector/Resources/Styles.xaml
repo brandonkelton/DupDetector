@@ -548,36 +548,44 @@
         <Setter Property="StrokeThickness" Value="6"/>
         <Setter Property="RadiusX" Value="10"/>
         <Setter Property="RadiusY" Value="10"/>
-        <!--<Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" 
-                                CornerRadius="2"
-                                Padding="{TemplateBinding Padding}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}"
-                                SnapsToDevicePixels="True">
-                        <ContentPresenter x:Name="PART_Content"
-                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                    TextElement.Foreground="{TemplateBinding Foreground}">
-                        </ContentPresenter>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Foreground" Value="CornflowerBlue"/>
-                            <Setter Property="BorderBrush" Value="CornflowerBlue"/>
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="CornflowerBlue"/>
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value="0.35"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>-->
+    </Style>
+    <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}"  >
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Padding" Value="10,5,10,5"/>
+        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Style.Triggers>
+            <Trigger Property="SortDirection" Value="{x:Null}">
+                <Setter Property="Background" Value="{DynamicResource DataGridHeaderBackgroundBrush}" />
+                <Setter Property="BorderBrush"  Value="Transparent" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="SortDirection" Value="{x:Null}" />
+                </MultiTrigger.Conditions>
+                <!--<Setter Property="Background" Value="{StaticResource DataGridHeaderMouseOverBackgroundBrush}" />
+                <Setter Property="BorderBrush" Value="{StaticResource DataGridHeaderBorderBrush}" />-->
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="true" />
+                    <Condition Property="SortDirection" Value="{x:Null}" />
+                </MultiTrigger.Conditions>
+                <!--<Setter Property="Background" Value="{StaticResource DataGridHeaderMouseOverBackgroundBrush}" />
+                <Setter Property="BorderBrush" Value="{StaticResource DataGridHeaderBorderBrush}" />-->
+            </MultiTrigger>
+            <!--<Trigger Property="SortDirection" Value="Ascending">
+                <Setter Property="Background" Value="{StaticResource DataGridHeaderSortedBackgroundBrush}" />
+            </Trigger>
+            <Trigger Property="SortDirection" Value="Descending">
+                <Setter Property="Background" Value="{StaticResource DataGridHeaderSortedBackgroundBrush}" />
+            </Trigger>-->
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="DataGridRowHeaderBackgroundStyle" TargetType="{x:Type DataGridRowHeader}">
+        <Setter Property="Background" Value="Gray" />
     </Style>
 </ResourceDictionary>
