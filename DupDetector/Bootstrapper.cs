@@ -10,44 +10,44 @@ using System.Threading.Tasks;
 
 namespace DupDetector
 {
-    public class Bootstrapper : IDisposable
+    public static class Bootstrapper
     {
-        private static ILifetimeScope _rootScope;
-        public ContainerBuilder Builder = new ContainerBuilder();
+        public static IContainer Container;
 
-        public void Start()
+        public static void Dispose()
         {
-            if (_rootScope != null)
-            {
-                throw new Exception("You may not re-start the current Bootstrapper. Call dispose on this instance and create a new one.");
-            }
-            
-            _rootScope = Builder.Build();
+            Container.Dispose();
         }
 
-        public void Dispose()
+        public static void ConfigureServices()
         {
-            _rootScope.Dispose();
+            var builder = new ContainerBuilder();
+            builder.RegisterType<MainWindow>().SingleInstance();
+            builder.RegisterType<MainViewModel>().SingleInstance();
+            builder.RegisterType<ProductViewModel>().SingleInstance();
+            builder.RegisterType<ProductGridViewModel>().SingleInstance();
+            builder.RegisterType<FileService>().As<IFileService>().SingleInstance();
+            Container = builder.Build();
         }
 
         public static T Resolve<T>()
         {
-            if (_rootScope == null)
+            if (Container == null)
             {
-                throw new Exception("Bootstrapper hasn't been started!");
+                throw new Exception("Bootstrapper hasn't been configured!");
             }
 
-            return _rootScope.Resolve<T>(new Parameter[0]);
+            return Container.Resolve<T>(new Parameter[0]);
         }
 
         public static T Resolve<T>(Parameter[] parameters)
         {
-            if (_rootScope == null)
+            if (Container == null)
             {
-                throw new Exception("Bootstrapper hasn't been started!");
+                throw new Exception("Bootstrapper hasn't been configured!");
             }
 
-            return _rootScope.Resolve<T>(parameters);
+            return Container.Resolve<T>(parameters);
         }
     }
 }

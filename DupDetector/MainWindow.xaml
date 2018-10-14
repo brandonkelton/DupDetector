@@ -10,7 +10,7 @@
         Title="MainWindow" Height="276" Width="540"
         ShowInTaskbar="True" WindowStyle="None" WindowState="Normal" ResizeMode="CanMinimize"
         MouseDown="Window_MouseDown"
-        DataContext="{StaticResource MainViewModel}">
+        DataContext="{Binding MainViewModel, Source={StaticResource ResourceLocator}}">
     <Grid Margin="0,0,30,34">
         <Grid.RowDefinitions>
             <RowDefinition Height="92*"/>

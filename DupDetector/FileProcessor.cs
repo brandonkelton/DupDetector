@@ -48,7 +48,7 @@ namespace DupDetector
                         var props = typeof(Product).GetProperties()
                             .Where(p => p.GetCustomAttributes(typeof(ColumnAttribute), false)
                                 .OfType<ColumnAttribute>()
-                                    .Where(a => a.Name == fileColName)
+                                    .Where(a => a.Name.Equals(fileColName, StringComparison.CurrentCultureIgnoreCase))
                                         .Count() > 0);
 
                         if (props.Count() > 0)

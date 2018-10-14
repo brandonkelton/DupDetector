@@ -24,11 +24,8 @@ namespace DupDetector
         public GridWindow()
         {
             InitializeComponent();
-
-            //Products.Add(new Product { Action = "Test1", Rank="1", AnimalFree = "Test2" });
-            //Products.Add(new Product { Action = "Test3", Rank="2", AnimalFree = "Test4" });
         }
 
-        public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
+        
     }
 }

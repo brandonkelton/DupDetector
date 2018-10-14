@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Autofac;
+using DupDetector.Resources;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -10,7 +12,12 @@ namespace DupDetector
 {
     public partial class App : Application
     {
-        private Bootstrapper Bootstrapper = new Bootstrapper();
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            new Startup();
 
+            //this.Resources["Locator"] = new ResourceLocator(property => Bootstrapper.Container.Resolve(Type.GetType(property)));
+        }
     }
 }

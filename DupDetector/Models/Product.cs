@@ -10,88 +10,88 @@ namespace DupDetector.Models
 {
     public class Product
     {
-        [Column("Action"), DisplayName("Action")]
+        [Column("action")]
         public string Action { get; set; }
 
-        [Column("Rank"), DisplayName("Rank")]
+        [Column("rank")]
         public string Rank { get; set; }
 
-        [Column("SKU"), DisplayName("SKU")]
+        [Column("sku")]
         public string SKU { get; set; }
 
-        [Column("base_SKU"), DisplayName("Base SKU")]
+        [Column("base_sku")]
         public string BaseSKU { get; set; }
 
-        [Column("product_type"), DisplayName("Product Type")]
+        [Column("product_type")]
         public string ProductType { get; set; }
 
-        [Column("molecule"), DisplayName("Molecule")]
+        [Column("molecule")]
         public string Molecule { get; set; }
 
-        [Column("original_molecule_identifier"), DisplayName("Original Molecule")]
+        [Column("original_molecule_identifier")]
         public string OriginalMolecule { get; set; }
 
-        [Column("manufacturer_common_name"), DisplayName("Manufacturer Name")]
+        [Column("manufacturer_common_name")]
         public string ManufacturerCommonName { get; set; }
 
-        [Column("species"), DisplayName("Species")]
+        [Column("species")]
         public string Species { get; set; }
 
-        [Column("size"), DisplayName("Size")]
+        [Column("size")]
         public string Size { get; set; }
 
-        [Column("size_n"), DisplayName("Size n")]
+        [Column("size_n")]
         public string SizeN { get; set; }
 
-        [Column("protein_or_immunogen_sequence"), DisplayName("Protein / Immmunogen Sequence")]
+        [Column("protein_or_immunogen_sequence")]
         public string ProteinImmmunogenSequence { get; set; }
 
-        [Column("tag"), DisplayName("Tag")]
+        [Column("tag")]
         public string Tag { get; set; }
 
-        [Column("host"), DisplayName("Host")]
+        [Column("host")]
         public string Host { get; set; }
 
-        [Column("isotype"), DisplayName("Isotype")]
+        [Column("isotype")]
         public string Isotype { get; set; }
 
-        [Column("clonality"), DisplayName("Clonality")]
+        [Column("clonality")]
         public string Clonality { get; set; }
 
-        [Column("clone"), DisplayName("Clone")]
+        [Column("clone")]
         public string Clone { get; set; }
 
-        [Column("bioactive"), DisplayName("Bioactive")]
+        [Column("bioactive")]
         public bool Bioactive { get; set; }
 
-        [Column("animal_free"), DisplayName("Animal Free")]
+        [Column("animal_free")]
         public bool AnimalFree { get; set; }
 
-        [Column("percent_purity"), DisplayName("Percent Purity")]
+        [Column("percent_purity")]
         public string PercentPurity { get; set; }
 
-        [Column("applications"), DisplayName("Applications")]
+        [Column("applications")]
         public string Applications { get; set; }
 
-        [Column("lead_time_weeks"), DisplayName("Lead Time")]
+        [Column("lead_time_weeks")]
         public string LeadTime { get; set; }
 
-        [Column("price"), DisplayName("Price")]
+        [Column("price")]
         public string Price { get; set; }
 
-        [Column("image_number"), DisplayName("Image Number")]
+        [Column("image_number")]
         public int ImageNumber { get; set; }
 
-        [Column("supplier"), DisplayName("Supplier")]
+        [Column("supplier")]
         public string Supplier { get; set; }
 
-        [Column("order_history"), DisplayName("Order History")]
+        [Column("order_history")]
         public string OrderHistory { get; set; }
 
-        [Column("buffer"), DisplayName("Buffer")]
+        [Column("buffer")]
         public string Buffer { get; set; }
 
-        [Column("supplier_catalog_number"), DisplayName("Supplier Catalog #")]
+        [Column("supplier_catalog_number")]
         public string SupplierCatalogNumber { get; set; }
     }
 }

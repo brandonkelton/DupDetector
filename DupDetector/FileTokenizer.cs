@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DupDetector
 {
-    public class Tokenizer
+    public class FileTokenizer : ITokenizer
     {
         public List<string> Tokens { get; private set; }
 

@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DupDetector"
              xmlns:vm="clr-namespace:DupDetector.ViewModels"
-             StartupUri="MainWindow.xaml">
+             xmlns:resources="clr-namespace:DupDetector.Resources">
     <Application.Resources>
         <ResourceDictionary>
-            <vm:MainViewModel x:Key="MainViewModel"/>
+            <resources:ResourceLocator x:Key="ResourceLocator"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>

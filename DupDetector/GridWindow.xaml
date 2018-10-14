@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DupDetector"
         mc:Ignorable="d"
-        Title="Details" Height="450" Width="800">
-    <Grid DataContext="{Binding ElementName=ProductDetails, Path=.}">
+        Title="Details" Height="450" Width="800"
+        DataContext="{Binding ProductGridViewModel, Source={StaticResource ResourceLocator}}">
+    <Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="3">
-            <DataGrid ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}" 
+            <DataGrid ItemsSource="{Binding Products}" 
                       AlternatingRowBackground="AliceBlue" AutoGenerateColumns="False" RowHeaderStyle="{StaticResource DataGridRowHeaderBackgroundStyle}"
                       HeadersVisibility="All">
                 <!-- Use this binding for data when running:  {Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=Products}-->

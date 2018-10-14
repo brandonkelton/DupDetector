@@ -12,11 +12,16 @@ namespace DupDetector.ViewModels
 {
     public class MainViewModel : ViewModel
     {
-        public MainViewModel()
+        private IFileService _service;
+
+        public MainViewModel(IFileService service)
         {
+            _service = service;
+
             SelectFileCommand = new RelayCommand(x => SelectFile(), x => true);
-            ShowGridWindowCommand = new RelayCommand(async x => await ShowGridWindow(), x => true);
-            DetailsCommand = new RelayCommand(async x => await ShowGridWindow(), x => true);
+            ProcessCommand = new RelayCommand(async x => await ProcessFile(), x => true);
+            ShowGridWindowCommand = new RelayCommand(x => ShowGridWindow(), x => true);
+            DetailsCommand = new RelayCommand(x => ShowGridWindow(), x => true);
         }
 
         public ICommand SelectFileCommand { get; }
@@ -32,19 +37,19 @@ namespace DupDetector.ViewModels
             }
         }
 
+        public ICommand ProcessCommand { get; }
+        private async Task ProcessFile()
+        {
+            await _service.LoadProducts(FileName);
+        }
+
         public ICommand DetailsCommand { get; }
 
 
         public ICommand ShowGridWindowCommand { get; }
-        private async Task ShowGridWindow()
+        private void ShowGridWindow()
         {
-            // Temp code to see if file loading works
-            var fileProcessor = new FileProcessor();
-            var rowCollection = await fileProcessor.Extract(FileName);
-            await fileProcessor.Translate(rowCollection);
-
             var gridWindow = new GridWindow();
-            gridWindow.Products = new ObservableCollection<Product>(fileProcessor.Products);
             gridWindow.Show();
         }
 
@@ -58,5 +63,7 @@ namespace DupDetector.ViewModels
                 OnPropertyChanged(() => FileName);
             }
         }
+
+        
     }
 }

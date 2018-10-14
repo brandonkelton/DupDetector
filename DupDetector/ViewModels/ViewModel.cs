@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace DupDetector.ViewModels
 {
-    public abstract class ViewModel : INotifyPropertyChanged
+    public abstract class ViewModel : IViewModel, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private static readonly PropertyChangedEventArgs EmptyChangeArgs = new PropertyChangedEventArgs(string.Empty);

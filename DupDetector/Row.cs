@@ -27,7 +27,7 @@ namespace DupDetector
 
         private List<string> ProcessText(string text)
         {
-            var tokenizer = new Tokenizer();
+            ITokenizer tokenizer = new FileTokenizer();
             tokenizer.Tokenize(text);
             return tokenizer.Tokens;
         }
