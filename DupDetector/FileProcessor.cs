@@ -40,28 +40,25 @@ namespace DupDetector
                 {
                     var product = new Product();
 
-                    for (int i = 0; i < rowCollection.ColumnNames.Count; i++)
+                    for (int i = 0; i < rowCollection.ColumnNames.Count - 1; i++)
                     {
                         var fileColName = rowCollection.ColumnNames[i];
                         var row = rowCollection.Rows[r];
-                        var props = typeof(Product).GetProperties().Where(p => p.GetCustomAttributes(typeof(ColumnAttribute), false).OfType<ColumnAttribute>().Where(a => a.Name == fileColName).Count() > 0);
+
+                        var props = typeof(Product).GetProperties()
+                            .Where(p => p.GetCustomAttributes(typeof(ColumnAttribute), false)
+                                .OfType<ColumnAttribute>()
+                                    .Where(a => a.Name == fileColName)
+                                        .Count() > 0);
+
                         if (props.Count() > 0)
                         {
                             string value = row.Fields[i];
-                            //Regex.IsMatch(value, @"^\d+$")
-                            if (props.ElementAt(0).PropertyType == typeof(int))
+                            bool isNumber = value.All(v => char.IsDigit(v));
+                            if (isNumber)
                             {
                                 int convertedValue;
                                 if (int.TryParse(value, out convertedValue))
-                                {
-                                    props.ElementAt(0).SetValue(product, convertedValue);
-                                }
-                            }
-                            //Regex.IsMatch(value, "^(True|true|False|false|1|0)")
-                            else if (props.ElementAt(0).PropertyType == typeof(bool))
-                            {
-                                bool convertedValue;
-                                if (bool.TryParse(value, out convertedValue))
                                 {
                                     props.ElementAt(0).SetValue(product, convertedValue);
                                 }
