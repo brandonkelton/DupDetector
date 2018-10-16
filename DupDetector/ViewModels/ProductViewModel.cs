@@ -58,16 +58,53 @@ namespace DupDetector.ViewModels
         private string _baseSKU;
 
         [DisplayName("Product Type")]
-        public string ProductType { get; set; }
+        public string ProductType
+        {
+            get => _productType;
+            set
+            {
+                _productType = value;
+                OnPropertyChanged(() => ProductType);
+            }
+        }
+        private string _productType;
+
 
         [DisplayName("Molecule")]
-        public string Molecule { get; set; }
+        public string Molecule
+        {
+            get => _molecule;
+            set
+            {
+                _molecule = value;
+                OnPropertyChanged(() => Molecule);
+            }
+        }
+        private string _molecule;
 
         [DisplayName("Original Molecule")]
-        public string OriginalMolecule { get; set; }
+        public string OriginalMolecule
+        {
+            get => _originalMolecule;
+            set
+            {
+                _originalMolecule = value;
+                OnPropertyChanged(() => OriginalMolecule);
+            }
+        }
+        private string _originalMolecule;
 
         [DisplayName("Manufacturer Name")]
-        public string ManufacturerCommonName { get; set; }
+        public string ManufacturerCommonName
+        {
+            get => _manufactureCommonName;
+            set
+            {
+                _manufactureCommonName = value;
+                OnPropertyChanged(() => ManufacturerCommonName);
+            }
+        }
+        private string _manufactureCommonName;
 
         [DisplayName("Species")]
         public string Species { get; set; }
