@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupDetector.Models
+namespace DupDetector.Database.Models
 {
     public class Product
     {
-        [Column("action")]
-        public string Action { get; set; }
-
-        [Column("rank")]
-        public string Rank { get; set; }
-
-        [Column("sku")]
+        [Key, Column("sku")]
         public string SKU { get; set; }
 
         [Column("base_sku")]

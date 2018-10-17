@@ -82,8 +82,8 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="MySqlConnector, Version=0.46.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySqlConnector.0.46.0\lib\net461\MySqlConnector.dll</HintPath>
+    <Reference Include="MySqlConnector, Version=0.46.1.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.0.46.1\lib\net461\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -152,32 +152,30 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Detector.cs" />
-    <Compile Include="ExpressionHelper.cs" />
-    <Compile Include="FileProcessor.cs" />
-    <Compile Include="FileService.cs" />
-    <Compile Include="FileTokenizer.cs" />
-    <Compile Include="GridWindow.xaml.cs">
+    <Compile Include="Database\EnquireContext.cs" />
+    <Compile Include="FileProcessor\Detector.cs" />
+    <Compile Include="Helpers\ExpressionHelper.cs" />
+    <Compile Include="FileProcessor\FileProcessor.cs" />
+    <Compile Include="FileProcessor\FileService.cs" />
+    <Compile Include="Tokenizers\FileTokenizer.cs" />
+    <Compile Include="Views\GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IFileService.cs" />
-    <Compile Include="ITokenizer.cs" />
-    <Compile Include="ModelMapper.cs" />
-    <Compile Include="Models\Species.cs" />
-    <Compile Include="Models\Application.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="ObservableObject.cs" />
-    <Compile Include="RelayCommand.cs" />
+    <Compile Include="FileProcessor\IFileService.cs" />
+    <Compile Include="Tokenizers\ITokenizer.cs" />
+    <Compile Include="Helpers\ModelMapper.cs" />
+    <Compile Include="Database\Models\Product.cs" />
+    <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Resources\ResourceLocator.cs" />
-    <Compile Include="Row.cs" />
-    <Compile Include="RowCollection.cs" />
+    <Compile Include="FileProcessor\Row.cs" />
+    <Compile Include="FileProcessor\RowCollection.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ProductGridViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -185,7 +183,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -193,7 +191,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GridWindow.xaml">
+    <Page Include="Views\GridWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

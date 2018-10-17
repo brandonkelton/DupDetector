@@ -1,4 +1,4 @@
-﻿using DupDetector.Models;
+﻿using DupDetector.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

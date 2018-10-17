@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DupDetector.Models;
+using DupDetector.Database.Models;
 using DupDetector.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupDetector
+namespace DupDetector.Helpers
 {
     public static class ModelMapper
     {

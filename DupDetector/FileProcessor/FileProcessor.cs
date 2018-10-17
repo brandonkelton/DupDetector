@@ -1,4 +1,4 @@
-﻿using DupDetector.Models;
+﻿using DupDetector.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -70,7 +70,7 @@ namespace DupDetector
                         }
                         else
                         {
-                            throw new Exception("Unknown column: " + fileColName);
+                            //throw new Exception("Unknown column: " + fileColName);
                         }
                     }
 

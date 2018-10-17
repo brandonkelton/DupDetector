@@ -1,5 +1,4 @@
-﻿using DupDetector.Models;
-using Microsoft.Win32;
+﻿using DupDetector.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,27 +12,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DupDetector
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for GridWindow.xaml
+    /// </summary>
+    public partial class GridWindow : Window
     {
-        public MainWindow()
+        public GridWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
-        }
-
-        private void ButtonClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

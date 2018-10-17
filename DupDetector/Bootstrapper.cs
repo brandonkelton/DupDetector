@@ -22,11 +22,14 @@ namespace DupDetector
         public static void ConfigureServices()
         {
             var builder = new ContainerBuilder();
+
             builder.RegisterType<MainWindow>().SingleInstance();
             builder.RegisterType<MainViewModel>().SingleInstance();
+            builder.RegisterType<GridWindow>().SingleInstance();
             builder.RegisterType<ProductViewModel>().SingleInstance();
             builder.RegisterType<ProductGridViewModel>().SingleInstance();
             builder.RegisterType<FileService>().As<IFileService>().SingleInstance();
+            
             Container = builder.Build();
         }
 
