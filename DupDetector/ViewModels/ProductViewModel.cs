@@ -107,63 +107,243 @@ namespace DupDetector.ViewModels
         private string _manufactureCommonName;
 
         [DisplayName("Species")]
-        public string Species { get; set; }
+        public string Species
+        {
+            get => _species;
+            set
+            {
+                _species = value;
+                OnPropertyChanged(() => Species);
+            }
+        }
+        private string _species;
 
         [DisplayName("Size")]
-        public string Size { get; set; }
+        public string Size
+        {
+            get => _size;
+            set
+            {
+                _size = value;
+                OnPropertyChanged(() => Size);
+            }
+        }
+        private string _size;
 
         [DisplayName("Size n")]
-        public string SizeN { get; set; }
+        public string SizeN
+        {
+            get => _sizeN;
+            set
+            {
+                _sizeN = value;
+                OnPropertyChanged(() => SizeN);
+            }
+        }
+        private string _sizeN;
 
         [DisplayName("Protein / Immmunogen Sequence")]
-        public string ProteinImmmunogenSequence { get; set; }
+        public string ProteinImmmunogenSequence
+        {
+            get => _proteinImmmunogenSequence;
+            set
+            {
+                _proteinImmmunogenSequence = value;
+                OnPropertyChanged(() => ProteinImmmunogenSequence);
+            }
+        }
+        private string _proteinImmmunogenSequence;
 
         [DisplayName("Tag")]
-        public string Tag { get; set; }
+        public string Tag
+        {
+            get => _tag;
+            set
+            {
+                _tag = value;
+                OnPropertyChanged(() => Tag);
+            }
+        }
+        private string _tag;
 
         [DisplayName("Host")]
-        public string Host { get; set; }
+        public string Host
+        {
+            get => _host;
+            set
+            {
+                _host = value;
+                OnPropertyChanged(() => Host);
+            }
+        }
+        private string _host;
 
         [DisplayName("Isotype")]
-        public string Isotype { get; set; }
+        public string Isotype
+        {
+            get => _isotype;
+            set
+            {
+                _isotype = value;
+                OnPropertyChanged(() => Isotype);
+            }
+        }
+        private string _isotype;
 
         [DisplayName("Clonality")]
-        public string Clonality { get; set; }
+        public string Clonality
+        {
+            get => _clonality;
+            set
+            {
+                _clonality = value;
+                OnPropertyChanged(() => Clonality);
+            }
+        }
+        private string _clonality;
 
         [DisplayName("Clone")]
-        public string Clone { get; set; }
+        public string Clone
+        {
+            get => _clone;
+            set
+            {
+                _clone = value;
+                OnPropertyChanged(() => Clone);
+            }
+        }
+        private string _clone;
 
         [DisplayName("Bioactive")]
-        public bool Bioactive { get; set; }
+        public bool Bioactive
+        {
+            get => _bioactive;
+            set
+            {
+                _bioactive = value;
+                OnPropertyChanged(() => Bioactive);
+            }
+        }
+        private bool _bioactive;
 
         [DisplayName("Animal Free")]
-        public bool AnimalFree { get; set; }
+        public bool AnimalFree
+        {
+            get => _animalFree;
+            set
+            {
+                _animalFree = value;
+                OnPropertyChanged(() => AnimalFree);
+            }
+        }
+        private bool _animalFree;
 
         [DisplayName("Percent Purity")]
-        public string PercentPurity { get; set; }
+        public string PercentPurity
+        {
+            get => _percentPurity;
+            set
+            {
+                _percentPurity = value;
+                OnPropertyChanged(() => PercentPurity);
+            }
+        }
+        private string _percentPurity;
 
         [DisplayName("Applications")]
-        public string Applications { get; set; }
+        public string Applications
+        {
+            get => _applications;
+            set
+            {
+                _applications = value;
+                OnPropertyChanged(() => Applications);
+            }
+        }
+        private string _applications;
 
         [DisplayName("Lead Time")]
-        public string LeadTime { get; set; }
+        public string LeadTime
+        {
+            get => _leadTime;
+            set
+            {
+                _leadTime = value;
+                OnPropertyChanged(() => LeadTime);
+            }
+        }
+        private string _leadTime;
 
         [DisplayName("Price")]
-        public string Price { get; set; }
+        public string Price
+        {
+            get => _price;
+            set
+            {
+                _price = value;
+                OnPropertyChanged(() => Price);
+            }
+        }
+        private string _price;
 
         [DisplayName("Image Number")]
-        public int ImageNumber { get; set; }
+        public int ImageNumber
+        {
+            get => _imageNumber;
+            set
+            {
+                _imageNumber = value;
+                OnPropertyChanged(() => ImageNumber);
+            }
+        }
+        private int _imageNumber;
 
         [DisplayName("Supplier")]
-        public string Supplier { get; set; }
+        public string Supplier
+        {
+            get => _supplier;
+            set
+            {
+                _supplier = value;
+                OnPropertyChanged(() => Supplier);
+            }
+        }
+        private string _supplier;
 
         [DisplayName("Order History")]
-        public string OrderHistory { get; set; }
+        public string OrderHistory
+        {
+            get => _orderHistory;
+            set
+            {
+                _orderHistory = value;
+                OnPropertyChanged(() => OrderHistory);
+            }
+        }
+        private string _orderHistory;
 
         [DisplayName("Buffer")]
-        public string Buffer { get; set; }
+        public string Buffer
+        {
+            get => _buffer;
+            set
+            {
+                _buffer = value;
+                OnPropertyChanged(() => Buffer);
+            }
+        }
+        private string _buffer;
 
         [DisplayName("Supplier Catalog #")]
-        public string SupplierCatalogNumber { get; set; }
+        public string SupplierCatalogNumber
+        {
+            get => _supplierCatalogNumber;
+            set
+            {
+                _supplierCatalogNumber = value;
+                OnPropertyChanged(() => SupplierCatalogNumber);
+            }
+        }
+        private string _supplierCatalogNumber;
     }
 }
